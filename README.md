@@ -4,6 +4,7 @@ Arquivos para ajudar instalar o zabbix localmente, para fins de estudo
 
 devne@Dell5400:~$ su
 Password:
+
 root@Dell5400:/home/devne# wget https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
 --2025-08-29 21:15:31--  https://repo.zabbix.com/zabbix/7.4/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_7.4+ubuntu24.04_all.deb
 Resolving repo.zabbix.com (repo.zabbix.com)... 178.128.6.101, 2604:a880:2:d0::2062:d001
@@ -967,4 +968,158 @@ lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
         TX packets 902  bytes 53951 (53.9 KB)
         TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
 
+root@Dell5400:/home/devne#
+
+devne@Dell5400:~$ su
+Password:
+root@Dell5400:/home/devne# systemctl restart zabbix-server zabbix-agent apache2
+root@Dell5400:/home/devne# systemctl enable zabbix-server zabbix-agent apache2
+Synchronizing state of zabbix-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-server
+Synchronizing state of zabbix-agent.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-agent
+Synchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+root@Dell5400:/home/devne# systemctl restart zabbix-server zabbix-agent apache2
+root@Dell5400:/home/devne# systemctl enable zabbix-server zabbix-agent apache2
+Synchronizing state of zabbix-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-server
+Synchronizing state of zabbix-agent.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-agent
+Synchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+root@Dell5400:/home/devne# ipconfig
+Command 'ipconfig' not found, did you mean:
+  command 'iwconfig' from deb wireless-tools (30~pre9-13.1ubuntu4)
+  command 'hipconfig' from deb hipcc (5.2.3-12)
+  command 'ifconfig' from deb net-tools (2.10-0.1ubuntu4.4)
+  command 'iconfig' from deb ipmiutil (3.1.9-3)
+Try: apt install <deb name>
+root@Dell5400:/home/devne# ipconfig
+Command 'ipconfig' not found, did you mean:
+  command 'ifconfig' from deb net-tools (2.10-0.1ubuntu4.4)
+  command 'iconfig' from deb ipmiutil (3.1.9-3)
+  command 'iwconfig' from deb wireless-tools (30~pre9-13.1ubuntu4)
+  command 'hipconfig' from deb hipcc (5.2.3-12)
+Try: apt install <deb name>
+root@Dell5400:/home/devne# ipconfig
+Command 'ipconfig' not found, did you mean:
+  command 'ifconfig' from deb net-tools (2.10-0.1ubuntu4.4)
+  command 'hipconfig' from deb hipcc (5.2.3-12)
+  command 'iwconfig' from deb wireless-tools (30~pre9-13.1ubuntu4)
+  command 'iconfig' from deb ipmiutil (3.1.9-3)
+Try: apt install <deb name>
+root@Dell5400:/home/devne# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.20.56.182  netmask 255.255.240.0  broadcast 172.20.63.255
+        inet6 fe80::215:5dff:fea5:672e  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:a5:67:2e  txqueuelen 1000  (Ethernet)
+        RX packets 5605  bytes 2052709 (2.0 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 4779  bytes 3013764 (3.0 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 1902  bytes 114083 (114.0 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1902  bytes 114083 (114.0 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@Dell5400:/home/devne# nano /etc/zabbix/zabbix_server.conf
+root@Dell5400:/home/devne# systemctl restart zabbix-server zabbix-agent apache2
+root@Dell5400:/home/devne# systemctl enable zabbix-server zabbix-agent apache2
+Synchronizing state of zabbix-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-server
+Synchronizing state of zabbix-agent.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable zabbix-agent
+Synchronizing state of apache2.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable apache2
+root@Dell5400:/home/devne# ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 172.20.56.182  netmask 255.255.240.0  broadcast 172.20.63.255
+        inet6 fe80::215:5dff:fea5:672e  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:a5:67:2e  txqueuelen 1000  (Ethernet)
+        RX packets 6707  bytes 2486544 (2.4 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 5808  bytes 4346683 (4.3 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 2300  bytes 149601 (149.6 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2300  bytes 149601 (149.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+root@Dell5400:/home/devne# ping 192.168.0.5
+PING 192.168.0.5 (192.168.0.5) 56(84) bytes of data.
+64 bytes from 192.168.0.5: icmp_seq=215 ttl=127 time=25.4 ms
+64 bytes from 192.168.0.5: icmp_seq=216 ttl=127 time=9.64 ms
+64 bytes from 192.168.0.5: icmp_seq=217 ttl=127 time=6.72 ms
+64 bytes from 192.168.0.5: icmp_seq=218 ttl=127 time=6.47 ms
+64 bytes from 192.168.0.5: icmp_seq=219 ttl=127 time=6.73 ms
+64 bytes from 192.168.0.5: icmp_seq=220 ttl=127 time=6.69 ms
+64 bytes from 192.168.0.5: icmp_seq=221 ttl=127 time=11.7 ms
+64 bytes from 192.168.0.5: icmp_seq=222 ttl=127 time=6.36 ms
+64 bytes from 192.168.0.5: icmp_seq=223 ttl=127 time=9.02 ms
+64 bytes from 192.168.0.5: icmp_seq=224 ttl=127 time=3.90 ms
+64 bytes from 192.168.0.5: icmp_seq=225 ttl=127 time=5.45 ms
+64 bytes from 192.168.0.5: icmp_seq=226 ttl=127 time=7.50 ms
+64 bytes from 192.168.0.5: icmp_seq=227 ttl=127 time=11.3 ms
+64 bytes from 192.168.0.5: icmp_seq=228 ttl=127 time=7.65 ms
+64 bytes from 192.168.0.5: icmp_seq=229 ttl=127 time=4.68 ms
+64 bytes from 192.168.0.5: icmp_seq=230 ttl=127 time=8.51 ms
+64 bytes from 192.168.0.5: icmp_seq=231 ttl=127 time=3.88 ms
+64 bytes from 192.168.0.5: icmp_seq=232 ttl=127 time=4.02 ms
+64 bytes from 192.168.0.5: icmp_seq=233 ttl=127 time=6.05 ms
+64 bytes from 192.168.0.5: icmp_seq=234 ttl=127 time=10.6 ms
+64 bytes from 192.168.0.5: icmp_seq=235 ttl=127 time=16.3 ms
+64 bytes from 192.168.0.5: icmp_seq=236 ttl=127 time=7.50 ms
+64 bytes from 192.168.0.5: icmp_seq=237 ttl=127 time=16.0 ms
+64 bytes from 192.168.0.5: icmp_seq=238 ttl=127 time=6.44 ms
+64 bytes from 192.168.0.5: icmp_seq=239 ttl=127 time=27.1 ms
+64 bytes from 192.168.0.5: icmp_seq=240 ttl=127 time=5.61 ms
+64 bytes from 192.168.0.5: icmp_seq=241 ttl=127 time=5.54 ms
+64 bytes from 192.168.0.5: icmp_seq=242 ttl=127 time=6.57 ms
+^C
+--- 192.168.0.5 ping statistics ---
+242 packets transmitted, 28 received, 88.4297% packet loss, time 246168ms
+rtt min/avg/max/mdev = 3.875/9.049/27.076/5.681 ms
+root@Dell5400:/home/devne# ping 192.168.0.5
+PING 192.168.0.5 (192.168.0.5) 56(84) bytes of data.
+64 bytes from 192.168.0.5: icmp_seq=1 ttl=127 time=6.12 ms
+64 bytes from 192.168.0.5: icmp_seq=2 ttl=127 time=25.3 ms
+64 bytes from 192.168.0.5: icmp_seq=3 ttl=127 time=19.4 ms
+64 bytes from 192.168.0.5: icmp_seq=4 ttl=127 time=7.76 ms
+64 bytes from 192.168.0.5: icmp_seq=5 ttl=127 time=12.5 ms
+64 bytes from 192.168.0.5: icmp_seq=6 ttl=127 time=6.86 ms
+64 bytes from 192.168.0.5: icmp_seq=7 ttl=127 time=6.68 ms
+64 bytes from 192.168.0.5: icmp_seq=8 ttl=127 time=15.1 ms
+^C
+--- 192.168.0.5 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7012ms
+rtt min/avg/max/mdev = 6.120/12.470/25.336/6.594 ms
+root@Dell5400:/home/devne# ping 192.168.0.5
+PING 192.168.0.5 (192.168.0.5) 56(84) bytes of data.
+64 bytes from 192.168.0.5: icmp_seq=1 ttl=127 time=19.2 ms
+64 bytes from 192.168.0.5: icmp_seq=2 ttl=127 time=7.95 ms
+64 bytes from 192.168.0.5: icmp_seq=3 ttl=127 time=13.6 ms
+64 bytes from 192.168.0.5: icmp_seq=4 ttl=127 time=7.65 ms
+64 bytes from 192.168.0.5: icmp_seq=5 ttl=127 time=19.4 ms
+64 bytes from 192.168.0.5: icmp_seq=6 ttl=127 time=7.88 ms
+64 bytes from 192.168.0.5: icmp_seq=7 ttl=127 time=13.1 ms
+64 bytes from 192.168.0.5: icmp_seq=8 ttl=127 time=6.39 ms
+64 bytes from 192.168.0.5: icmp_seq=9 ttl=127 time=8.83 ms
+64 bytes from 192.168.0.5: icmp_seq=10 ttl=127 time=6.67 ms
+64 bytes from 192.168.0.5: icmp_seq=11 ttl=127 time=10.1 ms
+64 bytes from 192.168.0.5: icmp_seq=12 ttl=127 time=12.6 ms
+^C
+--- 192.168.0.5 ping statistics ---
+12 packets transmitted, 12 received, 0% packet loss, time 11017ms
+rtt min/avg/max/mdev = 6.386/11.113/19.385/4.354 ms
 root@Dell5400:/home/devne#
