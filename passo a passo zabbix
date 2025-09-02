@@ -52,7 +52,7 @@
     descomentar a linha "DBPassword" e definir DBPassword=zabbix
 
 3 - vim /etc/apache2/conf-avaliable/zabbix.conf
-    descomentar a linha "php_value date.timezone Europe/Riga" e alterar para "php_value date.timezone America/Sao_paulo"
+    descomentar a linha "php_value date.timezone Europe/Riga" e alterar para "php_value date.timezone America/Aracaju"
 
 4 - Executar o comando "locale -a", caso não tenha o pt_BR.utf8, realize a instalação da seguinte forma:
     locale-gen pt_BR.UTF-8
@@ -86,7 +86,7 @@
     Próximo Passo
 
 5 - Nome do Servidor Zabbix: Inserir o hostname do servidor
-    Default Time Zone: System: (UTC-03:00) America/Sao_Paulo
+    Default Time Zone: System: (UTC-03:00) America/Aracaju
     Tema Padrão: Definir o de sua preferência
     Próximo Passo
 
